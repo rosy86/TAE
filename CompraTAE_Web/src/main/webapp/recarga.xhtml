@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:panelGrid id="panelModificar" columns="4" cellpadding="4"
+		cellspacing="4">
+		<p:outputLabel value="Clave" />
+		<p:inputText value=""
+			required="true" requiredMessage="Se requiere el campo clave."
+			size="6" maxlength="15" />
+		<p:outputLabel value="Nombre" />
+		<p:inputText value=""
+			required="true" requiredMessage="Se requiere el campo Nombre"
+			size="20" maxlength="50" />
+		<p:outputLabel value="Apellido Paterno" />
+		<p:inputText
+			value=""
+			size="20" required="true"
+			requiredMessage="Se requiere el campo Apellido Paterno."
+			maxlength="50" />
+		<p:outputLabel value="Apellido Materno" />
+		<p:inputText
+			value=""
+			size="20" required="true"
+			requiredMessage="Se requiere el campo Apellido Materno."
+			maxlength="50" />
+		<p:outputLabel />
+		<p:outputLabel />
+		<p:outputLabel />
+		<p:outputPanel>
+			<p:commandButton value="Cancelar" style="float:right;"
+				/>
+			<p:commandButton value="Aceptar" style="float:right;"
+				partialSubmit="true"
+				/>
+		</p:outputPanel>
+	</h:panelGrid>

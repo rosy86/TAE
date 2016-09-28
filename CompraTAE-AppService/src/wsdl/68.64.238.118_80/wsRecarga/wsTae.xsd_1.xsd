@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://tae.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://tae.com/">
+
+<xs:element name="consultaCredito" type="tns:consultaCredito" />
+
+<xs:element name="consultaCreditoResponse" type="tns:consultaCreditoResponse" />
+
+<xs:element name="consultaCreditoTerminal" type="tns:consultaCreditoTerminal" />
+
+<xs:element name="consultaCreditoTerminalResponse" type="tns:consultaCreditoTerminalResponse" />
+
+<xs:element name="consultaRecarga" type="tns:consultaRecarga" />
+
+<xs:element name="consultaRecargaResponse" type="tns:consultaRecargaResponse" />
+
+<xs:element name="recargaSaldo" type="tns:recargaSaldo" />
+
+<xs:element name="recargaSaldoResponse" type="tns:recargaSaldoResponse" />
+
+<xs:complexType name="consultaRecarga">
+<xs:sequence>
+<xs:element name="id_cadena" type="xs:string" minOccurs="0" />
+<xs:element name="id_tienda" type="xs:string" minOccurs="0" />
+<xs:element name="id_terminal" type="xs:string" minOccurs="0" />
+<xs:element name="folio" type="xs:string" minOccurs="0" />
+<xs:element name="fecha" type="xs:string" minOccurs="0" />
+<xs:element name="telefono" type="xs:string" minOccurs="0" />
+<xs:element name="monto" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultaRecargaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:respuestaRecarga" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="respuestaRecarga">
+<xs:sequence>
+<xs:element name="autorizacion" type="xs:string" minOccurs="0" />
+<xs:element name="fecha" type="xs:string" minOccurs="0" />
+<xs:element name="folio" type="xs:string" minOccurs="0" />
+<xs:element name="id_cadena" type="xs:string" minOccurs="0" />
+<xs:element name="id_terminal" type="xs:string" minOccurs="0" />
+<xs:element name="id_tienda" type="xs:string" minOccurs="0" />
+<xs:element name="leyendaTicket1" type="xs:string" minOccurs="0" />
+<xs:element name="leyendaTicket2" type="xs:string" minOccurs="0" />
+<xs:element name="monto" type="xs:string" minOccurs="0" />
+<xs:element name="responseCode" type="xs:int" />
+<xs:element name="responseDescription" type="xs:string" minOccurs="0" />
+<xs:element name="telefono" type="xs:string" minOccurs="0" />
+<xs:element name="vigencia" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultaCredito">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="consultaCreditoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:respuestaCredito" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="respuestaCredito">
+<xs:sequence>
+<xs:element name="fechaSaldo" type="xs:string" minOccurs="0" />
+<xs:element name="responseCode" type="xs:int" />
+<xs:element name="responseDescription" type="xs:string" minOccurs="0" />
+<xs:element name="saldo" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recargaSaldo">
+<xs:sequence>
+<xs:element name="id_cadena" type="xs:string" minOccurs="0" />
+<xs:element name="id_tienda" type="xs:string" minOccurs="0" />
+<xs:element name="id_terminal" type="xs:string" minOccurs="0" />
+<xs:element name="folio" type="xs:string" minOccurs="0" />
+<xs:element name="fecha" type="xs:string" minOccurs="0" />
+<xs:element name="telefono" type="xs:string" minOccurs="0" />
+<xs:element name="monto" type="xs:string" minOccurs="0" />
+<xs:element name="proveedor" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recargaSaldoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:respuestaRecarga" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultaCreditoTerminal">
+<xs:sequence>
+<xs:element name="id_cadena" type="xs:string" minOccurs="0" />
+<xs:element name="id_tienda" type="xs:string" minOccurs="0" />
+<xs:element name="id_terminal" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultaCreditoTerminalResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:respuestaCredito" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
